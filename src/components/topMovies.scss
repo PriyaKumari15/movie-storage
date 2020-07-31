@@ -1,0 +1,25 @@
+.App-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin: 5%;
+}
+.App {
+  display: grid;
+  grid-template-columns: 30% auto;
+}
+.App_alt {
+  display: grid;
+}
+.select-container {
+  height: 20px;
+}
+.grid-container-header {
+  display: grid;
+  grid-template-columns: auto 30%;
+}
+.grid-item-header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 30px;
+}
