@@ -3,7 +3,7 @@ import { render as rtlRender } from "@testing-library/react";
 import { createStore, applyMiddleware } from "redux";
 import thunkMiddleware from "redux-thunk";
 import { Provider } from "react-redux";
-import reducers, { initialState as reducerInitialState } from "./reducers";
+import reducers, { initialState as reducerInitialState } from "../reducers";
 
 function render(
   ui,

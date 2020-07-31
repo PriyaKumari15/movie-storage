@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "./test.utils";
-import TopMovie from "./components/topMovies";
-import { requestMovieData } from "./components/movieApi";
+import TopMovie from "../components/topMovies";
+import { requestMovieData } from "../components/movieApi";
 
 test("Load Movie List", async () => {
   const response = await requestMovieData();

@@ -1,4 +1,4 @@
-This project contains lists movies which is listed in order of **date of release** or **top rank**. And on selection of a movie will provide a short synopsis and any other
+This project contains list of movies which are listed in order of **date of release** or **top rank**. And on selection a movie, will provide a short synopsis and any other
 meta data available to be displayed.This project is built with React, Redux, JavaScript, and CSS.
 
 ## Available Scripts
