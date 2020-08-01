@@ -1,11 +1,14 @@
 import * as React from "react";
-
 import { connect } from "react-redux";
+
 import { removeMovieDetail } from "../actions/movieAction";
+
 import "./movieDetail.scss";
 
 const MovieDetail = (props) => {
+
   const detail = props.list;
+
   return (
     <div className="detail-container">
       {detail ? (
@@ -34,19 +37,22 @@ const MovieDetail = (props) => {
           </div>
         </div>
       ) : (
-        <div className="grid-container-error">
-          <div className="grid-item-error">{"No Detail Available"}</div>
-        </div>
-      )}
+          <div className="grid-container-error">
+            <div className="grid-item-error">{"No Detail Available"}</div>
+          </div>
+        )}
     </div>
   );
 };
+
 const mapDispatchToProps = (dispatch) => ({
-  removeMovieDetail: () => dispatch(removeMovieDetail()),
+  removeMovieDetail: () => dispatch(removeMovieDetail())
 });
+
 const mapStateToProps = (state) => {
   return {
-    list: state.data.movieDetail,
+    list: state.data.movieDetail
   };
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(MovieDetail);

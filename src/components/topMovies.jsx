@@ -1,12 +1,14 @@
 import * as React from "react";
-
 import { connect } from "react-redux";
-import "./topMovies.scss";
+
 import { sortMovieList } from "../actions";
 import MovieDetail from "./movieDetail";
 import MovieList from "./movieList";
 
+import "./topMovies.scss";
+
 const TopMovie = (props) => {
+
   return (
     <div className="App-container">
       <div className="grid-container-header">
@@ -37,12 +39,14 @@ const TopMovie = (props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  sortMovieList: (sortData) => dispatch(sortMovieList(sortData)),
+  sortMovieList: (sortData) => dispatch(sortMovieList(sortData))
 });
+
 const mapStateToProps = (state) => {
   return {
     sortList: state.data.sortList,
-    isShow: state.data.isShowDetail,
+    isShow: state.data.isShowDetail
   };
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(TopMovie);

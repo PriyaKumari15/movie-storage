@@ -1,6 +1,8 @@
 import React from "react";
-import "./App.scss";
+
 import TopMovies from "./components/topMovies";
+
+import "./App.scss";
 
 function App() {
   return (

@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+
 import {
   fetchData,
   movieDetail,
   removeMovieDetail,
-  sortMovieList,
+  sortMovieList
 } from "../actions";
+
 import "./movieList.scss";
 
 const MovieList = (props) => {
+
   useState(props.fetchData);
+
   return (
     <div className="container">
       <div className="container-overflow">
@@ -36,13 +40,13 @@ const MovieList = (props) => {
               );
             })
           ) : (
-            <div className={"grid-container-error"}>
-              <div className="grid-item">{"No Data Available"}</div>
-            </div>
-          )
+              <div className={"grid-container-error"}>
+                <div className="grid-item">{"No Data Available"}</div>
+              </div>
+            )
         ) : (
-          <div className="page-loader">{"Loading ..."} </div>
-        )}
+            <div className="page-loader">{"Loading ..."} </div>
+          )}
       </div>
     </div>
   );
@@ -52,13 +56,15 @@ const mapDispatchToProps = (dispatch) => ({
   fetchData: () => dispatch(fetchData()),
   sortMovieList: (sortData) => dispatch(sortMovieList(sortData)),
   movieDetail: (movie) => dispatch(movieDetail(movie)),
-  removeMovieDetail: () => dispatch(removeMovieDetail()),
+  removeMovieDetail: () => dispatch(removeMovieDetail())
 });
+
 const mapStateToProps = (state) => {
   return {
     isLoading: state.data.isListLoading,
     sortList: state.data.sortList,
-    list: state.data.movieList,
+    list: state.data.movieList
   };
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(MovieList);

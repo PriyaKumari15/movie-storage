@@ -1,5 +1,6 @@
 import React from "react";
 import { waitForElement } from "@testing-library/react";
+
 import { render, fireEvent, screen } from "./test.utils";
 import TopMovie from "../components/topMovies";
 import { requestMovieData } from "../components/movieApi";
@@ -8,6 +9,7 @@ test("Load Movie Detail", async () => {
   const response = await requestMovieData();
   let list = [];
   let sortList = [];
+
   if (response) {
     response &&
       response.components.forEach((data) => {
@@ -18,6 +20,7 @@ test("Load Movie Detail", async () => {
         }
       });
   }
+
   render(<TopMovie />);
   expect(await screen.findByText(list[0].title)).toBeDefined();
 

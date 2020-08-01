@@ -1,5 +1,7 @@
-This project contains list of movies which are listed in order of **date of release** or **top rank**. And on selection a movie, will provide a short synopsis and any other
-meta data available to be displayed.This project is built with React, Redux, JavaScript, and CSS.
+## Top Movies
+
+This project contains list of movies which are listed in order of **date of release** or **top rank**. And on selection of a movie, will provide a short synopsis and any other
+meta data available to be displayed.This project is initiated using create-react-app.
 
 ## Available Scripts
 
@@ -23,4 +25,3 @@ Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
